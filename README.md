@@ -37,6 +37,7 @@ Some example valid examples:
         }
 
 Following are invalid overloading because we can not overload on the basis of different return type
+
         public List<Customer> FindCustomer(String customer_name)
         {
           // your code
@@ -45,3 +46,30 @@ Following are invalid overloading because we can not overload on the basis of di
         {
           // your code
         }
+Following are also invalid overloading, because we cannot overload on the basis of access modifier
+        public List<Customer> FindCustomer(String customer_name)
+        {
+          // your code
+        }
+        private List<Customer> FindCustomer(String customer_name)
+        {
+          // your code
+        }
+Following are also not valid, because we cannot overload normal and optional parameter
+
+        public List<Customer> FindCustomer(String customer_name)
+        {
+          // your code
+        }
+        private List<Customer> FindCustomer(String customer_name = String.Empty)
+        {
+          // your code
+        }  
+        
+In the same way we can overload constructor of a class by defining more than one constructor with different parameters which is known as constructor overloading.
+
+It is also called:
+
+1. Early Binding or
+2. Compile Time Polymorphism or
+3. Static binding
